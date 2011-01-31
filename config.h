@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
+static const char font[]            = "Liberation Mono 8";
 static const char normbordercolor[] = "#262729";
 static const char normbgcolor[]     = "#262729";
 static const char normfgcolor[]     = "#ffffff";
@@ -18,8 +18,15 @@ static const char *tags[] = { "web", "dev", "im", "4", "5", "6", "v/a", "8", "to
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Chromium", NULL,       NULL,       0,            True,        -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       False,       -1 },
+    { "Chromium",  NULL,       NULL,       0,            False,       -1 },
+    { "MPlayer",   NULL,       NULL,       0,            True,        -1 },
+    { "Smplayer",  NULL,       NULL,       0,            True,        -1 },
+    { "URxvt",     "ncmpcpp",  NULL,       1 << 2,       False,       -1 },
+    { "URxvt",     "htop",     NULL,       1 << 2,       False,       -1 },
+    { "zathura",   NULL,       NULL,       1 << 2,       False,       -1 },
+    { "libreoffice-writer",    NULL, NULL, 1 << 3,       False,       -1 },
+    { "Gimp",      NULL,       NULL,       1 << 3,       True,        -1 },
+    { "Mumble",    NULL,       NULL,       1 << 3,       True,        -1 },
 };
 
 /* layout(s) */
@@ -32,6 +39,7 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
+static const int deflayouts[] = { 0, 0, 0,  0, 0, 0,  0, 0, 0 };
 
 /* key definitions */
 #define MODKEY Mod4Mask

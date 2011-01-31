@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
+static const char font[]            = "Sans 8";
 static const char normbordercolor[] = "#cccccc";
 static const char normbgcolor[]     = "#cccccc";
 static const char normfgcolor[]     = "#000000";
@@ -32,6 +32,7 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
+static const int deflayouts[] = { 0, 0, 0,  0, 0, 0,  0, 0, 0 };
 
 /* key definitions */
 #define MODKEY Mod1Mask
